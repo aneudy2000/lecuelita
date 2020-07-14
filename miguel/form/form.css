@@ -1,0 +1,12 @@
+body {
+  font-family: 'Baloo Da 2', cursive;
+  background-color: #e8e8e8;
+}
+
+.contenedor {
+  background-color: #fff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0px 1px 6px 2px #75828c;
+}
