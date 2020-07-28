@@ -1,6 +1,6 @@
 z-index
 display: {
-  flex-box,
+  flex,
   none,
   block,
   inline,
