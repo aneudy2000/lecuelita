@@ -1,0 +1,35 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  width: 100%;
+}
+
+.container {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background: #d0f789;
+  margin: 0px;
+}
+
+header h4 {
+  height: 20px;
+}
+
+.fotos {
+  display: block;
+}
+
+.fotos img {
+  width: 50px;
+}
+
