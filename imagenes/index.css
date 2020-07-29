@@ -1,3 +1,7 @@
+:root {
+  --gris: rgb(100, 4, 4);
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -5,11 +9,11 @@ body {
   width: 100%;
 }
 
-.container {
+.contenedor {
   margin: 0px;
   padding: 0px;
-  display: flex;
   width: 100%;
+  display: flex;
   flex-direction: column;
 }
 
@@ -26,10 +30,42 @@ header h4 {
 }
 
 .fotos {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.fotos img {
-  width: 50px;
+.fotos .fotos-contenedor {
+  width: 60px;
+  border: 1px solid var(--gris);
+  margin: 10px;
+  box-shadow: 2px 2px 5px grey;
+  position: relative;
 }
+
+.fotos .fotos-contenedor:hover {
+  top: 2px;
+}
+
+.fotos-contenedor img {
+  width: 50px;
+  margin: 5px;
+  padding: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  .fotos {
+    flex-direction: column;
+  }
+
+  .fotos .fotos-contenedor {
+    width: 100%;
+  }
+
+  .fotos-contenedor img {
+    width: 90%;
+  }
+}
+
+
 
