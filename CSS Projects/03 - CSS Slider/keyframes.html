@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.object {
+				float: left;
+				border-radius: 50%;
+				width: 150px;
+				height: 150px;
+				position: relative;
+				background: red;
+				animation: objectmove 5s infinite;
+				-webkit-animation: objectmove 5s infinite;
+				-moz-animation: objectmove 1s infinite;
+			}
+			.object2 {
+				width: 150px;
+				border-radius: 50%;
+				height: 150px;
+				position: relative;
+				background: green;
+				animation: objectmove 5s infinite;
+				-webkit-animation: objectmove2 5s infinite;
+				-moz-animation: objectmove2 1s infinite;
+			}
+			@-webkit-keyframes objectmove {
+				0% {top:0px;left:0;background:red;}
+				25% {top: 250px; left:0px;}
+				50% {top: 250px;left:250px;}
+				75% {top: 0px; left:250px;}
+				100% {top: 0px;left: 0px;background:green;}
+			}
+
+			@-webkit-keyframes objectmove2 {
+				0% {top:0px;left:250px;background:green}
+				25% {top: 250px; left:250px;}
+				50% {top: 250px;left:0px;}
+				75% {top: 0px; left:0px;}
+				100% {top: 0px;left: 250px;background:red}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="object"><h1>Jose</h1></div>
+		<div class="object2"></div>
+	</body>
+</html>

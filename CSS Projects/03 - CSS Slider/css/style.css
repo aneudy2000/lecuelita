@@ -1,0 +1,157 @@
+* { 
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	list-style: none;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+}
+
+#container {
+	width: 80%;
+	margin: 40px auto;
+	text-align: center;
+}
+
+h1 {
+	color: #000;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+ul.thumbs {
+	  display: inline-block;
+	  margin-bottom: 20px;
+}
+
+ul.thumbs li {
+	display: block;
+	float: left;
+	margin: 0 auto;
+	width: 85px;
+}
+
+ul.thumbs a {
+	display: block;
+	position: relative;
+	width: 85px;
+	height: 100px;
+	border: 4px solid transparent;
+	font: bold 12px/25px Arial, sans-serif;
+	color: #515151;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px rgba(255,255,255,.25), inset 1px 1px 0px rgba(0,0,0,.15);
+}
+ul.thumbs img {
+	border: #333 solid 4px;
+}
+
+ul.slides {
+	overflow: hidden;
+	clear: both;
+	border: #333 solid 4px;
+}
+
+ul.slides, ul.slides li, ul.slides img {
+	width: 367px;
+	height: 490px;
+	position: relative;
+	margin: auto;
+}
+
+ul.slides li {
+	position: absolute;
+	z-index: 50;
+}
+
+ul.thumbs li a span {
+	display: none;
+}
+
+ul.thumbs li a:hover span {
+	position: absolute;
+	z-index: 101;
+	display: block;
+	text-align: center;
+	width: 100px;
+	height: 25px;
+	bottom: -32px;
+	left: -10px;
+	border-radius: 3px;
+	cursor: pointer;
+	-webkit-box-shadow: 0px 1px 0px rgba(0,0,0,.4);
+	-moz-box-shadow: 0px 1px 0px rgba(0,0,0,.4);
+	box-shadow: 0px 1px 0px rgba(0,0,0,.4);
+	background: #fff; /* Older Browsers */
+	background: -webkit-linear-gradient(top, #fff 0%, #bcbcbc 100%);
+	background: -moz-linear-gradient(top, #fff 0%, #bcbcbc 100%);
+	background: -o-linear-gradient(top, #fff 0%, #bcbcbc 100%);
+	background: -ms-linear-gradient(top, #fff 0%, #bcbcbc 100%);
+	background: linear-gradient(top, #fff 0%, #bcbcbc 100%);
+}
+
+ul.thumbs li a:hover span:before{
+	width:0;
+	height:0;
+	border-bottom:5px solid #fff;
+	border-left:5px solid transparent;
+	border-right:5px solid transparent;
+	content:'';
+	position:absolute;
+	top:-5px;
+	left:44px;
+}
+
+/* Animation for slider */
+
+@-webkit-keyframes 'slide' {
+	0% {left: -370px;}
+	100% {left: 0px;}
+}
+
+ul.slides li:target {
+	z-index: 100;
+	-webkit-animation-name: slide;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+}
+
+/* Not Target */
+@-webkit-keyframes 'noTarget' {
+	0% {z-index: 75;}
+	100% {z-index:75;}
+}
+
+ul.slides li:not(:target) {
+	-webkit-animation-name: noTarget;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+}
+
+/* Firefox */
+@keyframes slide {
+	0% {left: -370px;}
+	100% {left: 0px;}
+}
+
+ul.slides li:target {
+	z-index: 100;
+	animation-name: slide;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+/* Not Target */
+@keyframes noTarget {
+	0% {z-index: 75;}
+	100% {z-index:75;}
+}
+
+ul.slides li:not(:target) {
+	animation-name: noTarget;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
