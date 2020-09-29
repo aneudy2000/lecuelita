@@ -1,38 +1,50 @@
-
-body {
-  font-family: 'Baloo Da 2', cursive;
-  background-color: #e8e8e8;
-}
-
-.contenedor {
-  background-color: #fff;
-  padding: 20px;
-  width: 300px;
-  border-radius: 15px;
-  box-shadow: 0px 1px 6px 2px #75828c;
-}
-
-.h3-titulo {
+/** tag */
+label {
   color: red;
+  background-color: #ffffff;
 }
 
 input {
+  color: red;
+}
+
+/**:focus :hover pseudo classes */
+input:focus {
+  background-color: aquamarine;
+}
+
+/** class */
+.my-input {
+  background-color: beige;
+}
+
+.form-group {
   border: 1px solid gray;
-  border-radius: 5px;
 }
 
-.btn {
-  border-radius: 4px;
-  border: 1px solid gray;
-  background: linear-gradient(to right, #f5f5f5, #dcdcdc);
+.form-group label {
+  color: green;
 }
 
-.btn:hover {
-  box-shadow: 1px 3px 3px gray;
+.red-with-border {
+  background: red;
+  color: white;
+  border: 1px solid blue;
 }
 
-.btn.btn-principal {
-  background: linear-gradient(to right, #e3798c, #a90724);
+.hobbies {
+  color: purple;
 }
 
+.hobbies label {
+  color: orange;
+}
 
+.hobbies label:hover {
+  color: red;
+}
+
+/** id  es unico*/
+#lastname {
+  color: purple;
+}
