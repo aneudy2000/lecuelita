@@ -1,36 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        /** tag */
+        label {
+            color: red;
+            background-color: #ffffff;
+        }
+        input {
+            color: red;
+        }
+        /**:focus :hover pseudo classes */
+        input:focus {
+            background-color: aquamarine;
+        }
+        /** class */
+        .my-input {
+            background-color: beige;
+        }
+        .form-group {
+            border: 1px solid gray;
+        }
+        .form-group label {
+            color: green;
+        }
+        .red-with-border {
+            background: red;
+            color: white;
+            border: 1px solid blue;
+        }
+        .hobbies {
+            color: purple;
+        }
+        .hobbies label {
+            color: orange;
+        }
+        .hobbies label:hover {
+            color: red;
+        }
+        /** id  es unico*/
+        #lastname {
+            color: purple;
+        }
+
+    </style>
 </head>
 <body>
-    <div>
-        <label style="color:gray">Name</label>
-        <input type="text" name="name">
+    <label>nada</label>
+    <div class="form-group">
+        <label>Name</label>
+        <input class="my-input" type="text" name="name">
     </div>
-    <div>
-        <label style="color:brown">Last Name</label>
-        <input type="text" name="lastname">
+    <div class="form-group">
+        <label>Last Name</label>
+        <input class="my-input" id="lastname" type="text" name="lastname">
     </div>
-    <div>
-        <label style="color: green">Birthdate</label>
-        <input type="date" name="birthdate">
+    <div class="form-group">
+        <label>Birthdate</label>
+        <input class="my-input" type="date" name="birthdate">
     </div>
-    <div>
+    <div class="form-group">
         <label>Age</label>
-        <input type="number" name="age">
+        <input class="my-input" type="number" name="age">
     </div>
     <div>
         <label>Gender:</label>
         M<input type="radio" name="gender" value="m">
         F<input type="radio" name="gender" value="f">
     </div>
-    <div>
-        <label>Hobbies:</label>
-        Biking<input type="checkbox" name="hobbies" value="biking">
-        Camping<input type="checkbox" name="hobbies" value="camping">
-        Swimming<input type="checkbox" name="hobbies" value="swimming">
+    <div class="hobbies">
+        <div class="title">Hobbies</div>
+        <label>Biking</label><input type="checkbox" name="hobbies" value="biking">
+        <label>Camping</label><input type="checkbox" name="hobbies" value="camping">
+        <label>Swimming</label><input type="checkbox" name="hobbies" value="swimming">
     </div>
-    <div>
+    <div class="">
         <label>Native Language</label>
         <select name="nativelanguage">
             <option></option>
