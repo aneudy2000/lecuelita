@@ -5,8 +5,8 @@
 </head>
 <body>
     <div class="form-group">
-        <label>Name</label>
-        <input class="my-input" type="text" name="name">
+        <label>First Name</label>
+        <input class="my-input" id="firstname" type="text" name="firstname">
     </div>
     <div class="form-group">
         <label>Last Name</label>
@@ -14,11 +14,11 @@
     </div>
     <div class="form-group">
         <label>Birthdate</label>
-        <input class="my-input" type="date" name="birthdate">
+        <input class="my-input" id="birthdate" type="date" name="birthdate">
     </div>
     <div class="form-group">
         <label>Age</label>
-        <input class="my-input" type="number" name="age">
+        <input class="my-input" id="age" type="number" name="age">
     </div>
     <div>
         <label>Gender:</label>
@@ -49,5 +49,38 @@
         <label>Comments</label>
         <textarea name="comments"></textarea>
     </div>
+    <button id="escribir" onclick="writeResult()">Escribir</button>
+    <button onclick="hideResult()">Borrar</button>
+    <div class="resultado">
+        <p>Mi nombre es <span id="minombre"></span>.</p>
+        <p>Cumplo años en <span id="mybirthdate"></span>.</p>
+        <p>My age is <span id="myage"></span>.</p>
+        <p>My gender is <span id="mygender"></span></p>
+    </div>
+    <script>
+        function showResult() {
+            document.getElementsByClassName('resultado')[0]
+                .classList.add('show');
+        }
+
+        function writeResult() {
+            var firstName = document.getElementById('firstname').value;
+            var lastName = document.getElementById('lastname').value;
+            var fullName = firstName + ' ' + lastName;
+            var birthdate = document.getElementById('birthdate').value;
+            var age = document.getElementById('age').value;
+
+            document.getElementById('minombre').innerText = fullName;
+            document.getElementById('mybirthdate').innerText = birthdate;
+            document.getElementById('myage').innerText = age;
+
+            showResult();
+        }
+
+        function hideResult() {
+            document.getElementsByClassName('resultado')[0]
+                .classList.remove('show');
+        }
+    </script>
 </body>
 </html>
